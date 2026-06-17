@@ -1,0 +1,13 @@
+.env
+milvus/volumes/
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+.vscode/
+.DS_Store
+chat_history.db
+myenv/
+demo_data/
+final_cleaned_file/
+cleaned_file/
+volumes/

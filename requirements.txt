@@ -1,0 +1,41 @@
+# LangChain Core and Community
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-core>=0.3.0
+
+# Google AI Integration (Use this instead of generic 'google')
+langchain-google-genai==2.1.9
+google-cloud-translate
+google-cloud-storage
+google-cloud-discoveryengine
+google-cloud-aiplatform
+
+# Database
+pymilvus
+SQLAlchemy>=2.0.0
+numpy>=1.26.0
+requests>=2.32.0
+
+# PDF and Image Processing
+PyMuPDF
+pypdf
+pillow
+tqdm
+
+# API and Server
+fastapi
+uvicorn
+gunicorn
+pydantic
+python-dotenv
+PyYAML
+
+# Language Detection
+langdetect
+
+pathlib
+
+redis
+reportlab
+python-docx
+sqlite_vec
