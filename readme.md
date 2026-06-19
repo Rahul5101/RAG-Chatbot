@@ -1,4 +1,4 @@
-# Navy WSS RAG Chatbot
+# RAG Chatbot
 
 Production-ready Retrieval-Augmented Generation (RAG) chatbot for querying any domain documents. The project includes document ingestion, Milvus vector retrieval, Gemini-based answer generation, multilingual support, persistent multi-session chat memory, Redis semantic caching, and a ChatGPT-style React frontend integrated with the FastAPI backend.
 
