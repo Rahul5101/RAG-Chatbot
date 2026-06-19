@@ -15,15 +15,13 @@ def generate_signed_url(gcs_url: str, expires_in_minutes: int = 120) -> str:
 
     # Load service account credentials explicitly
     service_account_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "service-account.json")
-    credentials = service_account.Credentials.from_service_account_file(
-        service_account_path
-    )
+    credentials = service_account.Credentials.from_service_account_file(service_account_path)
 
 
     if not gcs_url:
         return None
     client = storage.Client(credentials=credentials)
-    bucket_name = " km-navi-mdl-data"
+    bucket_name = " data-files"
     # Case 1: Signed or console-style URL → extract blob path
     if gcs_url.startswith("http"):
         parsed = urlparse(gcs_url)
@@ -43,9 +41,3 @@ def generate_signed_url(gcs_url: str, expires_in_minutes: int = 120) -> str:
     )
 
 
-# if __name__=="__main__":
-#     # url = "https://storage.googleapis.com/km-navy-data/DOPT/indian-navy-act/Naval%20Armament%20Act1923new.pdf"
-#     url = "https://storage.cloud.google.com/km-navy-data/DOPT/indian-navy-act/Naval%20Armament%20Act1923new.pdf"
-#     signed_url = generate_signed_url(gcs_url=url)
-
-#     print("sigend url:",signed_url)

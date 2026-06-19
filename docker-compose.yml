@@ -58,8 +58,8 @@ services:
 
   backend:
     build: .
-    image: km-navy-mdl-be:latest
-    container_name: km-navy-mdl-be
+    image: km-rag_chatbot-be:latest
+    container_name: km-rag_chatbot-be
     restart: unless-stopped
     ports:
       - "5000:5000"
@@ -93,8 +93,8 @@ services:
 
   frontend:
     build: ./frontend
-    image: km-navy-mdl-fe:latest
-    container_name: km-navy-mdl-fe
+    image: km-rag_chatbot-fe:latest
+    container_name: km-rag_chatbot-fe
     restart: unless-stopped
     ports:
       - "3000:80"

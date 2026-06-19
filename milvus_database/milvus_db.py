@@ -107,7 +107,7 @@ def insert_documents_in_milvus(docs, partition_name="default", embed_batch_size=
                 if len(buffer) >= insert_batch_size:
                     batch_count = len(buffer)
                     insert_partition_data_in_collection(partition_name, buffer)
-                    print(f"✅ Inserted {batch_count} new docs (Total so far: {total_docs})")
+                    print(f" Inserted {batch_count} new docs (Total so far: {total_docs})")
                     buffer.clear()
                     gc.collect()
 
@@ -136,14 +136,14 @@ def insert_documents_in_milvus(docs, partition_name="default", embed_batch_size=
         if buffer:
             batch_count = len(buffer)
             insert_partition_data_in_collection(partition_name, buffer)
-            print(f"✅ Inserted final {batch_count} docs (Total: {total_docs})")
+            print(f" Inserted final {batch_count} docs (Total: {total_docs})")
             buffer.clear()
             gc.collect()
 
 
 
 
-    print(f"🎯 Finished: Inserted {total_docs} new docs, Skipped {skipped} duplicates.")
+    print(f" Finished: Inserted {total_docs} new docs, Skipped {skipped} duplicates.")
 
     return total_docs, skipped
 

@@ -180,9 +180,7 @@ DB_PATH = os.path.join(BASE_DIR,DB_PATH)
 # Create tables
 Base.metadata.create_all(bind=engine)
 
-# ---------------------
-# Create new chat session
-# ---------------------
+
 @app.post("/chat/session")
 def create_session(payload: SessionCreate, db: Session = Depends(get_db)):
     session = ChatSession(title=payload.title)

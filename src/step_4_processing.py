@@ -33,7 +33,7 @@ def find_url(pageno, source):
 
             # Make short URL placeholder
     encoded_source = source.replace(" ", "%20")
-    temp_url = f"https://storage.cloud.google.com/km-navi-mdl-data/{encoded_source}.pdf"
+    temp_url = f"https://storage.cloud.google.com/data-files/{encoded_source}.pdf"
     try:
         signed_url = generate_signed_url(gcs_url=temp_url)
     except Exception as exc:
@@ -65,7 +65,7 @@ def process_file(query, embedding_model,chat_history):
 
         hits = results[0] if results else []
         if not hits:
-            print(f"⚠️ Milvus returned zero results for: {query}")
+            print(f" Milvus returned zero results for: {query}")
 
         # Step 3: Build docs
         docs,meta_data = [],[]
@@ -137,7 +137,7 @@ def process_file(query, embedding_model,chat_history):
             "metadata": meta_data,
             # "confidence_score": new_response.Confidence_Score
         }
-        # print("💾 Saving new result to Semantic Cache...")
+        # print("Saving new result to Semantic Cache...")
         # upsert_rag_response(
         #     rag_answer=final_output,
         #     query_text = query,

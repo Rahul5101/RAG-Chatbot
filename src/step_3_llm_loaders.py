@@ -78,7 +78,7 @@ def update_url(metadata):
         pageno = item.get("page")
         source = item.get("source")
         encoded_source = source.replace(" ", "%20")
-        temp_url = f"https://storage.cloud.google.com/km-navi-mdl-data/{encoded_source}.pdf"
+        temp_url = f"https://storage.cloud.google.com/data-files/{encoded_source}.pdf"
         signed_url = generate_signed_url(gcs_url=temp_url)
         signed_url_with_page = f"{signed_url}#page={pageno}"
         

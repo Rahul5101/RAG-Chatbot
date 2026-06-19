@@ -1,6 +1,6 @@
 # Navy WSS RAG Chatbot
 
-Production-ready Retrieval-Augmented Generation (RAG) chatbot for querying Navy WSS / maritime domain documents. The project includes document ingestion, Milvus vector retrieval, Gemini-based answer generation, multilingual support, persistent multi-session chat memory, Redis semantic caching, and a ChatGPT-style React frontend integrated with the FastAPI backend.
+Production-ready Retrieval-Augmented Generation (RAG) chatbot for querying any domain documents. The project includes document ingestion, Milvus vector retrieval, Gemini-based answer generation, multilingual support, persistent multi-session chat memory, Redis semantic caching, and a ChatGPT-style React frontend integrated with the FastAPI backend.
 
 ## Key Features
 
@@ -306,8 +306,4 @@ This mode is useful for complex domain questions that require deeper document gr
   - Discovery Engine ranking
   - Cloud Storage
 
-## CV Summary
 
-- Built an end-to-end RAG chatbot using FastAPI, React, Gemini, Milvus, Redis, SQLite memory, and Google Cloud services for source-grounded document QA.
-- Implemented persistent multi-session memory and Redis semantic caching, reducing repeated-query latency by up to 60-70%.
-- Delivered a Dockerized production stack with React frontend, FastAPI backend, Milvus, Redis Stack, MinIO, and etcd.
